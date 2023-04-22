@@ -13,7 +13,7 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
    w.Write([]byte(`{"message": "woggle"}`))
 }
 
-func main() 
+func main() {
   s := &Server{}
   http.Handle("/", s)
   log.Fatal(http.ListenAndServe(":8080", nil))
